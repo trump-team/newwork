@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important: Make sure viewport is properly set -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Donald J. Trump: History & Legacy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* USA Colors - Red, White, Blue */
+            --usa-red: #B22234;
+            --usa-white: #FFFFFF;
+            --usa-blue: #3C3B6E;
+            --usa-dark-blue: #002868;
+            --usa-light-blue: #1E40AF;
+            --usa-gray: #F8F9FA;
+            --usa-dark-red: #8B0000;
+            --gold: #FFD700;
+            
+            /* Shadows */
+            --shadow-red: 0 10px 30px rgba(178, 34, 52, 0.25);
+            --shadow-blue: 0 10px 30px rgba(60, 59, 110, 0.25);
+            --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-card: 0 8px 25px rgba(0, 0, 0, 0.1);
+            --gradient-usa: linear-gradient(135deg, #3C3B6E 0%, #B22234 100%);
+            --gradient-blue: linear-gradient(135deg, #3C3B6E 0%, #002868 100%);
+            --gradient-red: linear-gradient(135deg, #B22234 0%, #8B0000 100%);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+        }
+
+        .pill-text {
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(178, 34, 52, 0.3);
+        }
+
+        .headline {
+            margin: 0;
+            font-weight: 800;
+            color: var(--usa-white);
+            font-size: 84px;
+            line-height: 1;
+            text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(178, 34, 52, 0.4);
+            letter-spacing: -1px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--usa-white);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(60, 59, 110, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(178, 34, 52, 0.05) 0%, transparent 40%);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header & Navigation */
+        header {
+            margin-top: 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(178, 34, 52, 0.1);
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-usa);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 20px;
+            color: var(--usa-white);
+            box-shadow: var(--shadow-blue);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--usa-blue);
+            text-shadow: 0 2px 10px rgba(60, 59, 110, 0.1);
+        }
+
+        .logo-text span {
+            color: var(--usa-red);
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--usa-blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover {
+            color: var(--usa-red);
+            background: rgba(178, 34, 52, 0.05);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+            margin-left: 10px;
+        }
+
+        .btn-outline, .btn-solid {
+            padding: 10px 24px;
+            border-radius: var(--border-radius-sm);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--usa-blue);
+            border: 1px solid rgba(60, 59, 110, 0.3);
+            box-shadow: 0 0 15px rgba(60, 59, 110, 0.1);
+        }
+
+        .btn-outline:hover {
+            background: rgba(60, 59, 110, 0.05);
+            border-color: var(--usa-blue);
+            box-shadow: var(--shadow-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-solid {
+            background: var(--gradient-usa);
+            color: var(--usa-white);
+            border: none;
+            box-shadow: var(--shadow-blue);
+        }
+
+        .btn-solid:hover {
+            background: linear-gradient(135deg, #002868 0%, #8B0000 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(60, 59, 110, 0.35);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--usa-blue);
+            font-size: 24px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(60, 59, 110, 0.1);
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(60, 59, 110, 0.1);
+            box-shadow: var(--shadow-blue);
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background: var(--usa-white);
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(178, 34, 52, 0.1);
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-20px);
+            max-height: 0;
+            overflow: hidden;
+            border-top: 2px solid var(--usa-red);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-links a {
+            color: var(--usa-blue);
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(60, 59, 110, 0.1);
+            transition: var(--transition);
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--usa-red);
+            background: rgba(178, 34, 52, 0.05);
+        }
+
+        .mobile-nav-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 10px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 200px 0 80px;
+            background: var(--gradient-blue);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(178, 34, 52, 0.5) 0%, transparent 50%), 
+                radial-gradient(circle at 80% 20%, rgba(60, 59, 110, 0.3) 0%, transparent 50%);
+            filter: blur(40px);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--usa-white);
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffffff 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            max-width: 700px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 0 20px;
+            font-family: 'Crimson Text', serif;
+            font-size: 20px;
+        }
+
+        /* Trump Badges */
+        .trump-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 60px;
+            position: relative;
+            padding: 0 10px;
+            width: 100%;
+        }
+
+        .connector {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: var(--usa-white);
+            opacity: 0.6;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .connector-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--usa-white), transparent);
+        }
+
+        .trump-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: var(--border-radius-sm);
+            color: var(--usa-white);
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            min-width: 180px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            flex-direction: column;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .trump-badge:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            border-color: var(--usa-white);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .trump-badge i {
+            font-size: 24px;
+            color: var(--usa-white);
+        }
+
+        .trump-badge div {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .trump-badge div span:first-child {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .trump-badge div span:last-child {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Trump History Section */
+        .trump-history {
+            padding: 80px 0;
+            position: relative;
+            background-color: var(--usa-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            color: var(--usa-red);
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(178, 34, 52, 0.1);
+            font-size: 14px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            color: var(--usa-blue);
+        }
+
+        .section-description {
+            font-size: 16px;
+            color: #666;
+            text-shadow: none;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .history-card {
+            background: var(--usa-white);
+            border-radius: var(--border-radius);
+            padding: 30px 25px;
+            border: 1px solid rgba(60, 59, 110, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+
+        .history-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-usa);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .history-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--usa-red);
+            box-shadow: 0 15px 40px rgba(178, 34, 52, 0.15);
+        }
+
+        .history-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .history-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-usa);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: var(--usa-white);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .history-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--usa-blue);
+        }
+
+        .history-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .history-tag {
+            display: inline-block;
+            background: rgba(178, 34, 52, 0.1);
+            color: var(--usa-red);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(178, 34, 52, 0.1);
+        }
+
+        /* Trump Family Members - UPDATED: Removed pictures */
+        .trump-family {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #3C3B6E 0%, #002868 100%);
+        }
+
+        .trump-family .section-header .section-subtitle {
+            color: var(--usa-white);
+        }
+
+        .trump-family .section-header .section-title {
+            color: var(--usa-white);
+        }
+
+        .trump-family .section-header .section-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .members {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .members::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--usa-red), transparent);
+            z-index: 1;
+            box-shadow: 0 0 10px var(--usa-red);
+        }
+
+        .member {
+            flex: 1;
+            text-align: center;
+            padding: 0 15px;
+            position: relative;
+            z-index: 2;
+            min-width: 300px;
+            margin-bottom: 40px;
+        }
+
+        .member-portrait {
+            width: 180px;
+            height: 180px;
+            background: var(--gradient-usa);
+            color: var(--usa-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            border: 8px solid var(--usa-white);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .member-portrait:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+        }
+
+        .member h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--usa-white);
+        }
+
+        .member p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 280px;
+            margin: 0 auto;
+            font-size: 15px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        /* Trump Properties */
+        .trump-properties {
+            padding: 80px 0;
+            background-color: var(--usa-white);
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .property-card {
+            background: var(--usa-white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid rgba(60, 59, 110, 0.1);
+            transition: var(--transition);
+            box-shadow: var(--shadow-card);
+        }
+
+        .property-card:hover {
+            border-color: var(--usa-red);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(178, 34, 52, 0.15);
+        }
+
+        .property-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+            position: relative;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .property-text::before {
+            content: '"';
+            font-size: 50px;
+            color: var(--usa-red);
+            opacity: 0.3;
+            position: absolute;
+            top: -25px;
+            left: -10px;
+            font-family: serif;
+        }
+
+        .property-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .property-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-usa);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: var(--shadow-blue);
+            color: var(--usa-white);
+        }
+
+        .property-info h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--usa-blue);
+        }
+
+        .property-info p {
+            color: var(--usa-red);
+            font-weight: 500;
+            font-size: 14px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #B22234 0%, #8B0000 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(60, 59, 110, 0.6) 0%, transparent 50%);
+            filter: blur(40px);
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            color: var(--usa-white);
+        }
+
+        .cta p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            background: var(--usa-blue);
+            border-top: 3px solid var(--usa-red);
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 300px;
+            font-size: 14px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--usa-white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .footer-links a:hover {
+            color: var(--usa-white);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* USA Flag Background */
+        .usa-stripes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.02;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 30px,
+                    var(--usa-red) 30px,
+                    var(--usa-red) 60px
+                );
+        }
+
+        /* Stars */
+        .usa-stripes::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 50%;
+            background: 
+                radial-gradient(circle at 20% 30%, var(--usa-blue) 2px, transparent 2px),
+                radial-gradient(circle at 60% 20%, var(--usa-blue) 2px, transparent 2px),
+                radial-gradient(circle at 40% 70%, var(--usa-blue) 2px, transparent 2px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        /* Portrait Frame Effect */
+        .portrait-frame {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+        }
+
+        .portrait-frame::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid var(--usa-red);
+            border-radius: 50%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            .container {
+                max-width: 1200px;
+            }
+            .hero h1 {
+                font-size: 64px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 30px;
+            }
+            .hero h1 {
+                font-size: 56px;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+            .members {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .members::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            .mobile-menu-btn {
+                display: flex;
+            }
+            .nav-desktop {
+                display: none;
+            }
+            .hero {
+                padding: 150px 0 60px;
+                min-height: auto;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .headline {
+                font-size: 48px !important;
+                line-height: 1.1;
+                letter-spacing: -1px;
+            }
+            .hero-badge {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+            .pill-text {
+                font-size: 14px;
+                letter-spacing: 0.5px;
+            }
+            .trump-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            .trump-badge {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+                padding: 12px 15px;
+            }
+            .history-grid, .properties-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            .member {
+                min-width: 100%;
+            }
+            .member-portrait {
+                width: 150px;
+                height: 150px;
+                font-size: 40px;
+            }
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .headline {
+                font-size: 36px !important;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .history-card, .property-card {
+                padding: 25px 20px;
+            }
+            .cta h2 {
+                font-size: 28px;
+            }
+            .trump-badge div span:first-child {
+                font-size: 11px;
+            }
+            .trump-badge div span:last-child {
+                font-size: 15px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .hero p {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+            .hero-badge {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            .member-portrait {
+                width: 130px;
+                height: 130px;
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            .headline {
+                font-size: 32px !important;
+            }
+            .hero-badge {
+                font-size: 11px;
+                padding: 5px 10px;
+            }
+            .pill-text {
+                font-size: 12px;
+            }
+            .trump-badge {
+                min-width: auto;
+                padding: 10px 12px;
+            }
+            .trump-badge i {
+                font-size: 20px;
+            }
+            .trump-badge div span:first-child {
+                font-size: 10px;
+            }
+            .trump-badge div span:last-child {
+                font-size: 14px;
+            }
+            .member-portrait {
+                width: 120px;
+                height: 120px;
+                font-size: 32px;
+            }
+        }
+
+        /* Prevent horizontal scroll on mobile */
+        @media (max-width: 480px) {
+            body {
+                overflow-x: hidden;
+                position: relative;
+            }
+            .container {
+                overflow-x: hidden;
+            }
+            .hero-content {
+                overflow-x: hidden;
+            }
+        }
+
+        /* Fix for iOS Safari */
+        @supports (-webkit-touch-callout: none) {
+            .hero {
+                min-height: -webkit-fill-available;
+            }
+            .mobile-menu {
+                top: 85px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- USA Flag Background -->
+    <div class="usa-stripes"></div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <!-- Trump Logo -->
+            <a href="#" class="logo">
+                <div class="logo-icon">🇺🇸</div>
+                <div class="logo-text">Donald<span>Trump</span> </div>
+            </a>
+            <nav class="nav-desktop">
+                <ul class="nav-links">
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#family">Family</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="#history">History</a></li>
+                <li><a href="#family">Family</a></li>
+                <li><a href="#properties">Properties</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-flag-usa"></i>
+                    <span class="pill-text">45TH PRESIDENT · BUSINESS TYCOON · MAKE AMERICA GREAT AGAIN</span>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span class="pill-text">TRUMP ORGANIZATION · THE APPRENTICE · REAL ESTATE LEGEND</span>
+                </div>
+                <h1 class="headline" id="headline">
+                    Donald J.<br>
+                    Trump<br>
+                    History & Legacy
+                </h1>
+                <p>From real estate mogul to the 45th President of the United States. Explore the extraordinary journey, achievements, and impact of one of America's most iconic figures.</p>
+                
+                <!-- Trump Badges Section -->
+                <div class="trump-badges">
+                    <a href="#history" class="trump-badge">
+                        <i class="fas fa-landmark"></i>
+                        <div>
+                            <span>White House Years</span>
+                            <span>2017-2021</span>
+                        </div>
+                    </a>
+                    <a href="#family" class="trump-badge">
+                        <i class="fas fa-history"></i>
+                        <div>
+                            <span>Business Empire</span>
+                            <span>1971 to Present</span>
+                        </div>
+                    </a>
+                    <a href="#properties" class="trump-badge">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <span>Global Properties</span>
+                            <span>Worldwide Portfolio</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Connector Element -->
+                    <div class="connector">
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trump History Section -->
+    <section class="trump-history" id="history">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">PRESIDENTIAL LEGACY</div>
+                <h2 class="section-title">The Trump Journey: From Business to Politics</h2>
+                <p class="section-description">Explore the remarkable career and presidency of Donald J. Trump, one of America's most influential leaders</p>
+            </div>
+            <div class="history-grid">
+                <div class="history-card">
+                    <div class="history-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>The 45th President</h3>
+                    <p>Served as the 45th President of the United States from 2017 to 2021. Implemented historic tax cuts, appointed three Supreme Court justices, and brokered Middle East peace agreements.</p>
+                    <div class="history-tag">2017-2021</div>
+                </div>
+                <div class="history-card">
+                    <div class="history-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Business Empire</h3>
+                    <p>Built a global real estate empire starting in 1971. The Trump Organization owns and operates hotels, golf courses, and luxury properties worldwide.</p>
+                    <div class="history-tag">Est. 1971</div>
+                </div>
+                <div class="history-card">
+                    <div class="history-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Media & Entertainment</h3>
+                    <p>Host and producer of "The Apprentice" and "Celebrity Apprentice" for 14 seasons. New York Times bestselling author of "The Art of the Deal."</p>
+                </div>
+                <div class="history-card">
+                    <div class="history-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Achievements & Recognition</h3>
+                    <p>Received multiple stars on Hollywood Walk of Fame, named TIME Person of the Year, and recognized for economic achievements including record low unemployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trump Family Section - UPDATED: Removed pictures -->
+    <section class="trump-family" id="family">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">THE TRUMP FAMILY</div>
+                <h2 class="section-title">The First Family Legacy</h2>
+                <p class="section-description">Meet the influential Trump family who have played significant roles in business, politics, and philanthropy</p>
+            </div>
+            <div class="members">
+                <div class="member">
+                    <div class="member-portrait">
+                        👨‍💼
+                    </div>
+                    <h3>Donald J. Trump</h3>
+                    <p>45th President of the United States, businessman, and founder of The Trump Organization.</p>
+                </div>
+                <div class="member">
+                    <div class="member-portrait">
+                        👸
+                    </div>
+                    <h3>Melania Trump</h3>
+                    <p>First Lady of the United States (2017-2021), former model, and founder of Be Best initiative.</p>
+                </div>
+                <div class="member">
+                    <div class="member-portrait">
+                        💼
+                    </div>
+                    <h3>Ivanka Trump</h3>
+                    <p>Former Advisor to the President, businesswoman, and founder of Ivanka Trump fashion brand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trump Properties Section -->
+    <section class="trump-properties" id="properties">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">GLOBAL PROPERTIES</div>
+                <h2 class="section-title">Iconic Trump Properties Worldwide</h2>
+                <p class="section-description">Discover the luxurious hotels, resorts, and properties that define the Trump brand of excellence</p>
+            </div>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <p class="property-text">Trump Tower on Fifth Avenue in New York City serves as the headquarters for The Trump Organization and remains one of the most prestigious addresses in the world.</p>
+                    <div class="property-name">
+                        <div class="property-icon">
+                            <i class="fas fa-tower"></i>
+                        </div>
+                        <div class="property-info">
+                            <h4>Trump Tower</h4>
+                            <p>New York · Headquarters</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <p class="property-text">Mar-a-Lago in Palm Beach, Florida, is a historic estate transformed into a private club that served as the "Winter White House" during the Trump presidency.</p>
+                    <div class="property-name">
+                        <div class="property-icon">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <div class="property-info">
+                            <h4>Mar-a-Lago</h4>
+                            <p>Florida · Private Club</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <p class="property-text">Trump International Hotel & Tower in Chicago is a 98-story skyscraper featuring luxury residences, hotel rooms, and one of the city's finest restaurants.</p>
+                    <div class="property-name">
+                        <div class="property-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <div class="property-info">
+                            <h4>Trump Chicago</h4>
+                            <p>Illinois · Luxury Hotel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-bg"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join The MAGA Movement</h2>
+                <p>Be part of us Connect with supporters and stay updated on the latest news, events, giveaways, and initiatives from Donald J. Trump. nation Be part of the movement </p>
+                <!-- Changed button to navigate to connect.html -->
+                <a href="connect.html" class="btn-solid">Connect with Supporters</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">🇺🇸</div>
+                        <div class="logo-text">Donald<span>Trump</span></div>
+                    </a>
+                    <p>A tribute website celebrating the life, achievements, and legacy of the 45th President of the United States, Donald J. Trump.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Trump Properties</h3>
+                    <ul class="footer-links">
+                        <li><a href="#properties">Trump Tower</a></li>
+                        <li><a href="#properties">Mar-a-Lago</a></li>
+                        <li><a href="#properties">Trump Hotels</a></li>
+                        <li><a href="#properties">Golf Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Key Achievements</h3>
+                    <ul class="footer-links">
+                        <li><a href="#history">Tax Cuts & Jobs Act</a></li>
+                        <li><a href="#history">Middle East Peace</a></li>
+                        <li><a href="#history">Judicial Appointments</a></li>
+                        <li><a href="#history">Economic Growth</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#history">Presidential Legacy</a></li>
+                        <li><a href="#family">Trump Family</a></li>
+                        <li><a href="#properties">Global Properties</a></li>
+                        <!-- Changed this link to navigate to connect.html -->
+                        <li><a href="connect.html">Join Movement</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy;  Donald J. Trump Tribute. This is an informational website about Donald Trump's history and legacy.</p>
+                <p style="margin-top: 10px;">let Make America Great Again</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const body = document.body;
+            
+            if (!mobileMenuBtn || !mobileMenu) {
+                console.log('Mobile menu elements not found');
+                return;
+            }
+            
+            mobileMenuBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isActive = mobileMenu.classList.toggle('active');
+                
+                const icon = mobileMenuBtn.querySelector('i');
+                if (isActive) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    body.style.overflow = 'hidden';
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    body.style.overflow = '';
+                }
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    body.style.overflow = '';
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (mobileMenu.classList.contains('active') && 
+                    !mobileMenu.contains(e.target) && 
+                    !mobileMenuBtn.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    body.style.overflow = '';
+                }
+            });
+            
+            // Close mobile menu on escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                    if (mobileMenu && mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        document.body.style.overflow = '';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Button interactions
+        const buttons = document.querySelectorAll('.btn-solid, .btn-outline');
+        buttons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                if (this.tagName === 'BUTTON') {
+                    e.preventDefault();
+                }
+                
+                // Add a click effect with shadow
+                this.style.transform = 'scale(0.95)';
+                this.style.boxShadow = '0 5px 15px rgba(60, 59, 110, 0.4)';
+                
+                setTimeout(() => {
+                    this.style.transform = '';
+                    if (this.classList.contains('btn-solid')) {
+                        this.style.boxShadow = 'var(--shadow-blue)';
+                    }
+                }, 200);
+            });
+            
+            // Add touch feedback for mobile
+            button.addEventListener('touchstart', function () {
+                this.style.opacity = '0.8';
+            });
+            
+            button.addEventListener('touchend', function () {
+                this.style.opacity = '1';
+            });
+        });
+        
+        // Trump badge interactions
+        const trumpBadges = document.querySelectorAll('.trump-badge');
+        trumpBadges.forEach(badge => {
+            badge.addEventListener('click', function (e) {
+                // Add a click effect with shadow
+                this.style.transform = 'scale(0.95)';
+                this.style.boxShadow = '0 5px 15px rgba(255, 255, 255, 0.4)';
+                
+                setTimeout(() => {
+                    this.style.transform = '';
+                    this.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)';
+                }, 200);
+            });
+        });
+        
+        // Enhanced hover effects for cards
+        const cards = document.querySelectorAll('.history-card, .property-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.boxShadow = '0 15px 40px rgba(178, 34, 52, 0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function () {
+                this.style.boxShadow = 'var(--shadow-card)';
+            });
+        });
+        
+        // Fix for mobile headline font size
+        function adjustHeadlineFontSize() {
+            const headline = document.getElementById('headline');
+            if (!headline) return;
+            
+            const width = window.innerWidth;
+            if (width <= 768) {
+                headline.style.fontSize = width <= 576 ? '36px' : '48px';
+            } else {
+                headline.style.fontSize = '72px';
+            }
+        }
+        
+        // Initial adjustment
+        adjustHeadlineFontSize();
+        
+        // Adjust on resize
+        window.addEventListener('resize', adjustHeadlineFontSize);
+        
+        // Add subtle USA flag animation
+        function createFloatingFlags() {
+            const hero = document.querySelector('.hero');
+            if (!hero) return;
+            
+            for (let i = 0; i < 3; i++) {
+                const flag = document.createElement('div');
+                flag.innerHTML = '🇺🇸';
+                flag.style.position = 'absolute';
+                flag.style.fontSize = '32px';
+                flag.style.opacity = '0.1';
+                flag.style.left = Math.random() * 100 + '%';
+                flag.style.top = Math.random() * 100 + '%';
+                flag.style.animation = `float ${15 + Math.random() * 20}s ease-in-out infinite`;
+                flag.style.zIndex = '0';
+                hero.appendChild(flag);
+            }
+        }
+        
+        // Initialize animations
+        window.addEventListener('load', () => {
+            createFloatingFlags();
+        });
+    </script>
+</body>
+</html>
